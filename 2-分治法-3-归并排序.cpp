@@ -3,7 +3,11 @@
 using namespace std;
 void merge(int arr[], int i, int j, int mid) {
     int pos1 = i, pos2 = mid + 1;
-    // 需要额外的空间来存储归并后的有序段，否则原数组会被覆盖。为了方便此处使用C++的vector。如果用C语言的话，需要可变内存空间，链表是最好实践。
+    // 需要额外的空间来存储归并后的有序段，否则原数组会被覆盖。为了方便此处使用C++的vector。
+    // 如果用C语言的话，需要可变内存空间，链表是最好实践。合并有序链表在下一个文件。
+    // 链表的C语言实现在我的另一个仓库：DataStructureCCodes
+    // <https://github.com/ChangAkira/DataStructureCCodes>
+    // 下一个文件合并有序链表里是C++的链表。
     vector<int> tmp;
     tmp.reserve(j - i + 1);
     while (pos1 <= mid && pos2 <= j) {
